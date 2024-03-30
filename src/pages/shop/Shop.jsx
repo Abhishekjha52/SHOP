@@ -4,7 +4,7 @@ import { Product } from "./product"
 import "./shop.css"
 
 const Shop = () => {
-  
+
   return (
     <div className="shop">
       <div className="shopTitle">

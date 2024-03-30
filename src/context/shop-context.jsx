@@ -1,14 +1,20 @@
 import React, { createContext, useState } from "react"
 import { PRODUCTS } from "../products";
+
 export const ShopContext = createContext(null);
-const getDefaultCart = () => {//it generallt provides default cart values with 0, in caseif we create new product it will handle of creating a new product
+
+const getDefaultCart = () => {//it generally provides default cart values with 0, in caseif we create new product it will handle of creating a new product
     let cart = {};
     for (let i = 1; i < PRODUCTS.length + 1; i++) {//id's start with one so loop starts with 1
         cart[i] = 0;
     }
     return cart;
 }
+
+
 const ShopContextProvider = (props) => {
+
+
     const [cartItems, setCartItems] = useState(getDefaultCart());
 
     const getTotalCartAmount = () => {

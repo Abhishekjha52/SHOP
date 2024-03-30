@@ -10,7 +10,7 @@ const Cart = () => {
   const { cartItems, getTotalCartAmount } = useContext(ShopContext);
   const totalAmount = getTotalCartAmount();
   const navigate = useNavigate();
-  
+
   return (
     <div className="cart">
       <div>
@@ -18,7 +18,7 @@ const Cart = () => {
       </div>
       <div className="cartItems">
         {PRODUCTS.map((product) => {
-          if (cartItems[product.id] !== 0) {//it check whether product is added to cart and to check that cartUtems object will have value greater than 0
+          if (cartItems[product.id] !== 0) {//it check whether product is added to cart and to check that cartItems object will have value greater than 0
             return <CartItem data={product} />
           }
           return null;
